@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <title>Shopping cart</title>
+</head>
+
+<body class="bg-light">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10 col-11 mx-auto">
+                <div class="row mt-3 gx-3 p-3">
+
+                    <div class="col-md-12 col-lg-8 col-11 mx-auto main-cart mb-lg-0 mb-5 shadow-lg">
+                        <div class="card p-3">
+                            <h2 class="py-3 font-weight-bold"> Cart (2 items)</h2>
+
+                            <div class="row">
+
+                                <div
+                                    class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow-lg product-img">
+
+                                    <img src="images/shirt.jpg" class="img-fluid" alt="shirt" />
+
+                                </div>
+
+                                <div class="col-md-7 col-11 px-4 mt-2 ">
+                                    <div class="row">
+
+                                        <div class="card-title col-md-6 mx-auto">
+                                            <h1 class="mb-3 product_name"> White shirt</h1>
+                                            <p class="mb-3">Size:M</p>
+                                            <p class="mb-3">Material:Cotton</p>
+                                            <p class="mb-3">Color:White</p>
+                                            <p></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul class="pagination justify-content-end set-quantity">
+                                                <li class="page-item"><button class="page-link"
+                                                        onclick="decrement('textbox','itemvall')"><i
+                                                            class="fa-sharp fa-solid fa-minus"></i></button></li>
+                                                <li class="page-item"><input type="text" id="textbox" value="0"
+                                                        class="page-link mx-2"></a></li>
+                                                <li class="page-item"><button class="page-link"
+                                                        onclick="increment('textbox','itemvall')"><i
+                                                            class="fa-sharp fa-solid fa-plus"></i></button>
+                                                </li>
+
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8 d-flex justify-content-between remove_wish">
+                                            <p><i class="fa-solid fa-trash me-3"></i>Remove</p>
+                                            <p><i class="fa-solid fa-heart me-3"></i>wishlist</p>
+
+                                        </div>
+                                        <div class="col-4 justify-content-end d-flex price">
+                                            <h3>$<span id="itemvall">0.00</span></h3>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <hr />
+                        <div class="card p-3">
+
+
+                            <div class="row">
+
+                                <div
+                                    class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow-lg product-img">
+
+                                    <img src="images/blue.jpg" class="img-fluid" alt="shirt" />
+
+                                </div>
+
+                                <div class="col-md-7 col-11 px-4 mt-2 mx-auto ">
+                                    <div class="row">
+
+                                        <div class="card-title col-md-6 ">
+                                            <h1 class="mb-4 product_name">Blue Jeans</h1>
+                                            <p class="mbS2">Size:S</p>
+                                            <p class="mbM2">Material:Cotton</p>
+                                            <p class="mbC3">Color:Black</p>
+                                            <p></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul class="pagination justify-content-end set-quantity">
+                                                <li class="page-item"><button class="page-link"
+                                                        onclick="decrement('textbox1','itemval1')"><i
+                                                            class="fa-sharp fa-solid fa-minus"></i></button></li>
+                                                <li class="page-item"><input type="text" id="textbox1" value="0"
+                                                        class="page-link mx-2"></a></li>
+                                                <li class="page-item"><button class="page-link"
+                                                        onclick="increment('textbox1','itemval1')"><i
+                                                            class="fa-sharp fa-solid fa-plus "></i></button>
+                                                </li>
+
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8 d-flex justify-content-between remove_wish ">
+                                            <p><i class="fa-solid fa-trash me-3"></i>Remove</p>
+                                            <p><i class="fa-solid fa-heart me-3"></i>wishlist</p>
+
+                                        </div>
+                                        <div class="col-4 justify-content-end d-flex price">
+                                            <h3>$<span id="itemval1">0.00</span></h3>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- right side data -->
+                    <div class="col-md-12 col-lg-4 col-11 mx-auto mt-lg-0 mt-md-4">
+                        <div class="right-side p-3 shadow bg-white">
+                            <h2 class="product-name mb-5"> Total amount </h2>
+                            <div class="price-indivi d-flex justify-content-between">
+                                <p> Product amount</p>
+                                <p>$<span id="product_total_amt">0.00</span></p>
+                            </div>
+                            <div class="price-indivi d-flex justify-content-between">
+                                <p> Shipping charges</p>
+                                <p>$<span id="shipping_amount">50.00</span></p>
+                            </div>
+                            <hr />
+                            <div class="total-amount d-flex  justify-content-between font-weight-bold">
+                                <p>Total amount </p>
+                                <p>$<span id="cart_amount">0.00</span></p>
+                            </div>
+                            <button class="btn btn-primary">Checkout</button>
+                        </div>
+                        <div class="coupon mt-3 shadow-lg">
+                            <div class="card">
+                                <div class="card-body">
+                                    
+                                    <div class="collaps" id="collapeExample">
+                                        <div class="mt-3">
+                                            <input type="text" name="" id="discount_code1"
+                                                class="form-control font-weight-bold" placeholder="Enter discount code">
+                                            <small id="error">Code : vipin</small>
+                                        </div>
+                                        <button class="btn btn-primary btn-sm mt-3"
+                                            onclick="discount_code()">Apply</button>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="mt-3 shadow p-2 bg-white">
+                            <div class="pt-4">
+                                <h5 class="mb-4"> Expected delivery date</h5>
+                                <p>30/10/22-5/11/22</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+        var product_total_amt = document.getElementById('product_total_amt');
+        var cart_amount = document.getElementById('cart_amount');
+        var shipping_amount = document.getElementById('shipping_amount');
+        var discount_code1=document.getElementById('discount_code1');
+        const decrement = (incdec, itemprice) => {
+            var itemval = document.getElementById(incdec);
+            var itemprice = document.getElementById(itemprice);
+            // console.log(itemval.value);
+            if (itemval.value <= 0) {
+                itemval.value = 0;
+            }
+            else {
+                itemval.value = parseInt(itemval.value) - 1;
+                itemval.style.background = '#fff';
+                itemval.style.color = '#000';
+                itemprice.innerHTML = parseInt(itemprice.innerHTML) - 15;
+                product_total_amt.innerHTML = parseInt(product_total_amt.innerHTML) - 15;
+                cart_amount.innerHTML = parseInt(product_total_amt.innerHTML) + parseInt(shipping_amount.innerHTML);
+            }
+
+        }
+        const increment = (incdec, itemprice) => {
+            var itemval = document.getElementById(incdec);
+            var itemprice = document.getElementById(itemprice);
+
+            if (itemval.value >= 5) {
+                itemval.value = 5;
+                alert('Max 5 can be selected');
+                itemval.style.background = 'red';
+                itemval.style.color = 'white';
+
+            }
+            else {
+                itemval.value = parseInt(itemval.value) + 1;
+                itemprice.innerHTML = parseInt(itemprice.innerHTML) + 15;
+                product_total_amt.innerHTML = parseInt(product_total_amt.innerHTML) + 15;
+                cart_amount.innerHTML = parseInt(product_total_amt.innerHTML) + parseInt(shipping_amount.innerHTML);
+            }
+
+        }
+        const discount_code=()=>{
+            let currtotalamt=parseInt(cart_amount.innerHTML);
+            let error=document.getElementById('error');
+            if(discount_code1.value==='vipin'){
+                let newtotalamt=currtotalamt-15;
+                cart_amount.innerHTML=newtotalamt;
+                error.innerHTML='Hooray! You saved $15';
+            }
+            else{
+error.innerHTML='Try again! code is vipin'
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
